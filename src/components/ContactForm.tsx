@@ -41,7 +41,7 @@ export default function ContactForm() {
       <label>Your name<input name="name" type="text" autoComplete="name" required /></label>
       <label>Your email<input name="email" type="email" autoComplete="email" required /></label>
       <label>Message<textarea name="message" rows={5} required /></label>
-      <button className="btn p" type="submit">Send message</button>
+      <button className="pill c" type="submit">Send message</button>
       {status && <p role="status" className={`fs ${status.type}`}>{status.text}</p>}
     </form>
   );

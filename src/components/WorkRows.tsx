@@ -1,28 +1,23 @@
-import type { CSSProperties } from "react";
 import { featured, samples } from "@/content/projects";
 
 export default function WorkRows() {
   return (
-    <section id="work">
+    <section id="work" style={{ borderTop: "1px solid var(--line)" }}>
       <div className="wrap">
-        <h2>Selected work</h2>
-        <p className="sub">Deployed on Vercel and open to browse. Hover a row, then open it.</p>
-        <div className="rows">
+        <h2 className="rv">Selected work</h2>
+        <div className="rows rv">
           {featured.map((p) => (
-            <a key={p.name} className="row" style={{ "--c": p.color } as CSSProperties} href={p.url} target="_blank" rel="noopener noreferrer">
+            <a key={p.name} className="row" href={p.url} target="_blank" rel="noopener noreferrer">
               <h3>{p.name}</h3>
-              <span className="tag">Next.js</span>
+              <em>Next.js</em>
               <p>{p.blurb}</p>
             </a>
           ))}
         </div>
-        <h3 style={{ marginTop: "3rem", fontSize: "1.5rem" }}>Small-business sites</h3>
-        <div className="chips">
+        <p className="rv" style={{ marginTop: "2.6rem", color: "var(--mut)" }}>Small-business sites</p>
+        <div className="chips rv">
           {samples.map((s) => (
-            <a key={s.name} href={s.url} target="_blank" rel="noopener noreferrer">
-              {s.name}
-              <small>{s.kind}</small>
-            </a>
+            <a key={s.name} href={s.url} target="_blank" rel="noopener noreferrer">{s.name}<small>{s.kind}</small></a>
           ))}
         </div>
       </div>

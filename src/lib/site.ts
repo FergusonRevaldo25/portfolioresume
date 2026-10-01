@@ -1,5 +1,5 @@
 export const site = {
-  name: "Ferguson Revaldo",
+  name: "Revaldo Ferguson",
   email: "revaldo.ferguson01@gmail.com",
   resume: "/Ferguson-Revaldo-Resume.pdf",
   linkedin: "https://www.linkedin.com/in/revaldo-ferguson-45b98321b/",
